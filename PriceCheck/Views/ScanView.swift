@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ScanView: View{
-    let  = ViewController()
+    let scan : PriceScan
     
     var body: some View{
-        NavigationView{
-            ZStack{
-                NavigationLink(destination: ScanListView(viewController: viewController)) {
-                    Text(scan.item)
-                }
-            }
+        HStack{
+            Text(scan.item)
+            Text(String(scan.price))
+                .font(.body)
+                .bold()
+                .frame(alignment: .trailing)
         }
     }
 }
